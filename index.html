@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Chu's Online Resume</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <div class="content-box flex-grow-1">
+        <div class="main-title text-center mb-5">
+            <h2>Michael Chu</h2>
+            <p>San Jose, CA | <a href="mailto:chulaphang.25@gmail.com">chulaphang.25@gmail.com</a> | <a href="https://www.linkedin.com/in/michael-chu-computerscientist/" target="_blank">LinkedIn</a></p>
+        </div>
+
+        <main class="container">
+
+            <div class="text-center mb-4">
+                <img src="me.jpg" class="img-fluid rounded shadow-lg w-50" alt="Michael Chu">
+            </div>
+
+            <div class="text-center mb-5">
+                <h2>About Me</h2>
+                <video class="rounded shadow-lg" controls style="width: 600px; height: 350px;">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h2>Education</h2>
+            <p><strong>Bachelor of Science in Computer Science</strong>, San Jose State University (Expected May 2025)</p>
+            <p><strong>Relevant Coursework:</strong> Object-Oriented Design, Data Structures, Artificial Intelligence, Mobile Development, Big Data Processing, Data Visualization, Information Security.</p>
+            <p><a href="transcript.html" class="btn btn-outline-primary">View Transcript</a></p>
+  
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Java, Python, HTML, CSS, C, SQL, Pandas, Seaborn, Plotly</li>
+                <li><strong>Repositories and IDEs:</strong> GitHub, Bitbucket, VS Code, PyCharm, IntelliJ IDEA, Android Studio, and Virtual Machine (VMware)</li>
+                <li><strong>Tools:</strong> GitHub, Bitbucket, VS Code, PyCharm, IntelliJ IDEA, Android Studio</li>
+                <li><strong>Operating Systems:</strong> Windows, Linux, macOS</li>
+                <li><strong>Software:</strong> Camtasia, Canva, AutoCAD, Sketch, Tableau</li>
+            </ul>
+
+            <h2>Work Experience</h2>
+            <p><strong>Data Analyst Intern</strong>, Dayta AI, Hong Kong (Dec 2025 - Present)</p>
+            <ul>
+                <li>Utilize the Dayta AI Cyclops product to visualize visitor behavioral data from over 100 cameras in shopping malls. Write Python scripts to access information via APIs. Optimize data processing workflows by improving code readability, maintainability, and efficiency, laying the groundwork for scalable automation using cron jobs and web scrapping.</li>
+                <li>Analyze demographics, including age, gender, footfall counts, and movement patterns, using heat maps for enhanced visual representation.</li>
+                <li>Collaborating with the Hong Kong Housing Authority to develop an interactive dashboard for data visualization using Python, Tableau, Pandas, and Seaborn to optimize sales and operations in their retail environments.</li>
+            </ul>
+            
+            <p><strong>Student Assistant</strong>, Accessible Education Center, SJSU (Jul 2023 - Oct 2025)</p>
+            <ul>
+                <li>Developed accessible educational materials to accommodate students with disabilities. Created video tutorials for students to utilize the services of the center.</li>
+                <li>Managed social media channels, created promotional materials to highlight the center’s services, and hosted information sessions and student events.</li>
+                <li>Served as proctor and provided scribing/reading support for accommodated exams. Provided guidance to visitors to the.Student Center.</li>
+            </ul>
+            
+            <p><strong>Student Assistant</strong>, Instructional Design, College of Engineering, SJSU (Sep 2022 - May 2023)</p>
+            <ul>
+                <li>Helped professors utilize learning materials/platforms for teaching efficiency. </li>
+                <li>Produced and edited video productions to the YouTube channel using Camtasia and Adobe. </li>
+                <li>Managed the center’s websites to showcase available teaching platforms, educational tools, and software applications. </li>
+                <li>Tested and evaluated educational tools, software applications, and learning platforms for professors and staff. </li>
+                <li>Assisted in developing instructional materials, newsletters, and layouts. </li>
+            </ul>
+
+           
+            <!-- Projects Dropdown -->
+            <h2>Highlighted Projects</h2>
+            <div class="custom-dropdown">
+                <button class="dropdown-btn">Select a Project ▼</button>
+                <ul class="dropdown-content">
+                    <li><a href="prj1.html">Library Management System</a></li>
+                    <li><a href="prj2.html">Spark-Art</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Google Map -->
+            <h2>My Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203132.80929355026!2d-121.98057777994165!3d37.29631538311611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2sSan%20Jose%2C%20CA!5e0!3m2!1sen!2sus!4v1739380747534!5m2!1sen!2sus"
+             width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
+        </main>
+    </div>
+
+    <footer class="text-center py-2">
+        <p>&copy; 2025 Michael Chu. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const dropdownContent = document.querySelector(".dropdown-content");
+    
+            dropdownBtn.addEventListener("click", function() {
+                dropdownContent.classList.toggle("show");
+            });
+            window.addEventListener("click", function(event) {
+                if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                    dropdownContent.classList.remove("show");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
